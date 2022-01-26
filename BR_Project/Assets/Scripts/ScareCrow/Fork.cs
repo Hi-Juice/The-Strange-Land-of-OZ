@@ -13,7 +13,7 @@ public class Fork : MonoBehaviour
 
     public float Rush_Speed;
 
-    
+    public bool isStop = false;
     public bool isAttack = false;
     public bool isChasing = false;
     Vector3 dir;
@@ -25,6 +25,7 @@ public class Fork : MonoBehaviour
 
     void Update()
     {
+        
         dir = Player.transform.position - transform.position;
         if (isChasing == true)
         {
@@ -49,6 +50,18 @@ public class Fork : MonoBehaviour
     {
         StartCoroutine(Attack());
     }
+    public void Stop_Attack()
+    {
+        Debug.Log("Stop_Attack");
+        AttackCollider.enabled = false;
+        isAttack = false;
+        isChasing = false;
+        isStop = true;
+        Scarecrow.isPattern = false;
+        Scarecrow.isFork = false;
+        
+    }
+
 
     IEnumerator Attack()
     {
@@ -56,6 +69,11 @@ public class Fork : MonoBehaviour
 
         while (stack < 3)
         {
+            if(isStop == true)
+            {
+                break;
+            }
+            Debug.Log("isChasing True");
             float time = 0;
             //isAttack = false;
             isChasing = true;
@@ -80,7 +98,7 @@ public class Fork : MonoBehaviour
             }
 
             time = 0;
-            SoundManager.Instance.Play_ScareCrowPattenForkSound();
+            SoundManager.Instance.Play_ScareCrowPatternForkSound();
             while (time < 1f)
             {
                 
@@ -102,7 +120,7 @@ public class Fork : MonoBehaviour
 
         isChasing = false;
         yield return new WaitForSeconds(1f);
-        Scarecrow.isPatten = false;
+        Scarecrow.isPattern = false;
         Scarecrow.isFork = false;
         Scarecrow.isMove = false;
         //yield return new WaitForSeconds(2f);

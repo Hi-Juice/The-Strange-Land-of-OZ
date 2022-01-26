@@ -20,18 +20,32 @@ public class BezierBullet : MonoBehaviour
     {
         if(enemy == null)
         {
-            enemy = GameObject.Find("AttackPoint");            
+            enemy = GameObject.Find("AttackPoint");
+            effectManager = GameObject.Find("EffectManager").GetComponent<EffectManager>();
+            if (enemy != null)
+
+            {
+                if (enemy.tag == "Obstacle")
+                {
+                    posB = 1; // ÈÖ¾îÁüÀ» Àû°Ô ¸¸µê
+                }
+            }
+        }
+        else
+        {
+            if (enemy.tag == "Obstacle")
+            {
+                posB = 1; // ÈÖ¾îÁüÀ» Àû°Ô ¸¸µê
+            }
         }
         
-        if(enemy.tag == "Obstacle")
-        {
-            posB = 1; // ÈÖ¾îÁüÀ» Àû°Ô ¸¸µê
-        }
+        
 
         effectManager = GameObject.FindObjectOfType<EffectManager>();
         
         point[0] = master.transform.position; // P0
         point[1] = PointSetting(master.transform.position); // P1
+        if(enemy != null)
         point[2] = PointSetting(enemy.transform.position); // P2
         
 
@@ -39,16 +53,21 @@ public class BezierBullet : MonoBehaviour
 
     private void Update()
     {
-        if(enemy != null)
-        {
-            point[3] = enemy.transform.position; // P3
-        }
-        
+
         if (enemy != null)
         {
+            point[3] = enemy.transform.position; // P3
             Vector2 direction = new Vector2(enemy.transform.position.x - this.transform.position.x, enemy.transform.position.y - this.transform.position.y);
             transform.right = direction;
         }   
+        else
+        {
+            //Debug.Log("Bezier Bullet Destroy");
+            GameObject vfx = effectManager.GetBulletEffect();
+            vfx.transform.position = this.transform.position;
+            Destroy(this.gameObject);
+
+        }
     }
 
     void FixedUpdate()
@@ -83,7 +102,7 @@ public class BezierBullet : MonoBehaviour
         if (collision.gameObject == enemy)
         {
             //hit = true;
-            GameObject vfx = effectManager.GetEffect();
+            GameObject vfx = effectManager.GetBulletEffect();
             vfx.transform.position = this.transform.position;
 
 
@@ -98,10 +117,6 @@ public class BezierBullet : MonoBehaviour
             else if(enemy.tag == "Lion")
             {
                 enemy.GetComponentInParent<Boss_Lion>().GetHit();
-            }
-            else if(enemy.tag == "Obstacle")
-            {
-                Destroy(enemy);
             }
             Destroy(gameObject);
         }

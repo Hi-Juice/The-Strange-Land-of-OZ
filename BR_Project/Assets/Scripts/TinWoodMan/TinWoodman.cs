@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class TinWoodman : MonoBehaviour
 {
@@ -24,10 +26,12 @@ public class TinWoodman : MonoBehaviour
 
     Rigidbody2D rb;
     public Animator Arm_Animator;
+
     Animator ani;
 
     float speed = 2f;
     public int boss_HP = 50;
+    public int boss_MaxHp = 100;
     public float boss_MoveSpeed = 2f;
 
 
@@ -39,7 +43,7 @@ public class TinWoodman : MonoBehaviour
     public GameObject Player;
     public GameObject Oil_Object;
 
-    public bool isPatten = false;
+    public bool isPattern = false;
     public bool isStart;
     public bool isDie = false;
     public bool isMove = false;
@@ -67,26 +71,46 @@ public class TinWoodman : MonoBehaviour
     public GameObject Axe;
     public GameObject Middle_Floor;
 
-
+    public Sprite[] heart_Sprite;
     BossState bossState = BossState.Move;
     TreeNum bossTreeState = TreeNum.First;
     public GameObject Parent;
+    public Slider BossHP_Slider;
 
     public Vector3 direction;
     float angle;
+    int Pattern = 3;
+    Animator hitAnim;
+    public Animator parentAnim;
+
+    Transform initialTransform;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        ani = GetComponentInParent<Animator>();
+        ani = parentAnim.GetComponent<Animator>();
         ani.SetBool("isJump", true);
         spriteRenderer = GetComponent<SpriteRenderer>();
         bossTreeState = TreeNum.First;
         bossState = BossState.Move;
-        isPatten = true;
-        StartCoroutine(Move());
+        isPattern = true;
         
+        boss_HP = boss_MaxHp;
 
+        hitAnim = GetComponent<Animator>();
+        initialTransform = Parent.transform;
     }
+
+
+    public void StartGame()
+    {
+        if (isStart == false)
+        {
+            isStart = true;
+            StartCoroutine(Move());
+        }
+         Pattern = Random.Range(0, 3);
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -101,45 +125,20 @@ public class TinWoodman : MonoBehaviour
 
         if (isDie == false)
         {
-            if (isPatten == false)
+            if (isPattern == false)
             {
                 Update_State();
                 //bossState = BossState.Move; // 테스트용 줄 삭제 필수
 
 
-                if (Input.GetKey(KeyCode.Q))
-                {
-                    bossState = BossState.Move;
-                }
-                
-                else if(Input.GetKey(KeyCode.W))
-                {
-                    bossState = BossState.HeartAttack;
-                }
-                else if (Input.GetKey(KeyCode.E))
-                {
-                    bossState = BossState.OilFlooding;
-                }
-                else if (Input.GetKey(KeyCode.R))
-                {
-                    bossState = BossState.Apple;
-                }
-                else if(Input.GetKey(KeyCode.T))
-                {
-                    bossState = BossState.SwingAxe;
-                }
-
-
-                isPatten = true;
+                isPattern = true;
                 if (bossState == BossState.Move)
                 {
-                    
                     StartCoroutine(Move());
                 }
                 else if (bossState == BossState.HeartAttack)
                 {
                     StartCoroutine("Start_HeartAttack");
-                    
                 }
                 else if (bossState == BossState.OilFlooding)
                 {
@@ -149,128 +148,148 @@ public class TinWoodman : MonoBehaviour
                 {
                     StartCoroutine("Start_Apple");
                 }
-                
             }
         }
 
-        if(isMove && dir == "Left")
+        if(!isDie)
         {
-            Parent.transform.Translate(Vector2.left * boss_MoveSpeed * Time.deltaTime);
+            if (isMove && dir == "Left")
+            {
+                Parent.transform.Translate(Vector2.left * boss_MoveSpeed * Time.deltaTime);
+            }
+            else if (isMove && dir == "Right")
+            {
+                Parent.transform.Translate(Vector2.right * boss_MoveSpeed * Time.deltaTime);
+            }
         }
-        else if(isMove && dir == "Right")
+        else
         {
-            Parent.transform.Translate(Vector2.right * boss_MoveSpeed * Time.deltaTime);
+            Parent.transform.localPosition = new Vector3(-19f, 0, 0);
+           
+            leftArm.SetActive(false);
+            rightArm.SetActive(true);
+            transform.rotation = Quaternion.Euler(0, 0, -30);
+            spriteRenderer.flipX = true;
+            HeartAttack_Spawn_Point.GetComponent<SpriteRenderer>().flipX = true;
+            StopAllCoroutines();
         }
+        
 
     }
 
     private void Update_State()
     {
-        int patten = Random.Range(0, 5);
-        if (patten == 0)
+        if (Pattern == 0)
         {
             bossState = BossState.HeartAttack;
+            Pattern++;
         }
-        else if (patten == 1)
+        else if (Pattern == 1)
         {
             bossState = BossState.OilFlooding;
+            Pattern++;
         }
-        else if (patten == 2)
+        else if (Pattern == 2)
         {
             bossState = BossState.Apple;
+            Pattern++;
         }
-        else
+        else if(Pattern == 3)
         {
             bossState = BossState.Move;
+            Pattern = 0;
         }
     }
 
 
     private IEnumerator Move() //위치 변경
     {
-        Debug.Log("$#");
-       
-        int Random_num = 0;
-        isMove = true;
-        if (bossTreeState == TreeNum.First)
+        if (!isDie)
         {
-            Debug.Log("첫번째 지점에서 다른 지점으로 이동");
-            dir = "Left";
-            yield return new WaitForSeconds(4f);
-
-            /*
-            while (Random_num == 0)
+            Debug.Log("$#");
+            int Random_num = 0;
+            isMove = true;
+            if (bossTreeState == TreeNum.First)
             {
-                Random_num = Random.Range(0, 4);
+                Debug.Log("첫번째 지점에서 다른 지점으로 이동");
+                dir = "Left";
+                yield return new WaitForSeconds(4f);
+
+                /*
+                while (Random_num == 0)
+                {
+                    Random_num = Random.Range(0, 4);
+                }
+                */
+                Random_num = 3;
+            }
+            /*
+            else if(bossTreeState == TreeNum.Second)
+            {
+                Debug.Log("두번째 지점에서 다른 지점으로 이동");
+                dir = "Right";
+                yield return new WaitForSeconds(1f);
+
+                while (Random_num == 1)
+                {
+                    Random_num = Random.Range(0, 4);
+                }
+            }
+            else if (bossTreeState == TreeNum.Third)
+            {
+                Debug.Log("세번째 지점에서 다른 지점으로 이동");
+                dir = "Left";
+                yield return new WaitForSeconds(1f);
+
+                while (Random_num == 2)
+                {
+                    Random_num = Random.Range(0, 4);
+                }
             }
             */
-            Random_num = 3;
-        }
-        /*
-        else if(bossTreeState == TreeNum.Second)
-        {
-            Debug.Log("두번째 지점에서 다른 지점으로 이동");
-            dir = "Right";
+            else if (bossTreeState == TreeNum.Four)
+            {
+                Debug.Log("네번째 지점에서 다른 지점으로 이동");
+                dir = "Right";
+                yield return new WaitForSeconds(4f);
+
+                /*
+                while (Random_num == 3)
+                {
+                    Random_num = Random.Range(0, 4);
+                }
+                */
+                Random_num = 0;
+            }
+            yield return new WaitForSeconds(0.5f);
+            bossTreeState = return_Tree(Random_num);
+            Parent.transform.position = Move_Transform_Obejct[Random_num].transform.position;
+            Debug.Log("이동!");
+            if (Random_num == 0 || Random_num == 2)
+            {
+                Debug.Log("첫번째 또는 세번째 지점에서 등장");
+                dir = "Right";
+                leftArm.SetActive(false);
+                rightArm.SetActive(true);
+                transform.rotation = Quaternion.Euler(0, 0, -30);
+                spriteRenderer.flipX = true;
+                HeartAttack_Spawn_Point.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if ((Random_num == 1 || Random_num == 3))
+            {
+                Debug.Log("두번째 또는 네번째 지점에서 등장");
+                dir = "Left";
+                leftArm.SetActive(true);
+                rightArm.SetActive(false);
+                transform.rotation = Quaternion.Euler(0, 0, 30);
+                spriteRenderer.flipX = false;
+                HeartAttack_Spawn_Point.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            yield return new WaitForSeconds(3.5f);
+            isMove = false;
             yield return new WaitForSeconds(1f);
-
-            while (Random_num == 1)
-            {
-                Random_num = Random.Range(0, 4);
-            }
+            isPattern = false;
         }
-        else if (bossTreeState == TreeNum.Third)
-        {
-            Debug.Log("세번째 지점에서 다른 지점으로 이동");
-            dir = "Left";
-            yield return new WaitForSeconds(1f);
-
-            while (Random_num == 2)
-            {
-                Random_num = Random.Range(0, 4);
-            }
-        }
-        */
-        else if (bossTreeState == TreeNum.Four)
-        {
-            Debug.Log("네번째 지점에서 다른 지점으로 이동");
-            dir = "Right";
-            yield return new WaitForSeconds(4f);
-
-            /*
-            while (Random_num == 3)
-            {
-                Random_num = Random.Range(0, 4);
-            }
-            */
-            Random_num = 0;
-        }
-        yield return new WaitForSeconds(2f);
-        bossTreeState = return_Tree(Random_num);
-        Parent.transform.position = Move_Transform_Obejct[Random_num].transform.position;
-        Debug.Log("이동!");
-        if (Random_num == 0 || Random_num == 2)
-        {
-            Debug.Log("첫번째 또는 세번째 지점에서 등장");
-            dir = "Right";
-            leftArm.SetActive(false);
-            rightArm.SetActive(true);
-            transform.rotation = Quaternion.Euler(0, 0, -30);
-            spriteRenderer.flipX = true;
-        }
-        else if((Random_num == 1 || Random_num == 3))
-        {
-            Debug.Log("두번째 또는 네번째 지점에서 등장");
-            dir = "Left";
-            leftArm.SetActive(true);
-            rightArm.SetActive(false);
-            transform.rotation = Quaternion.Euler(0, 0, 30);
-            spriteRenderer.flipX = false;
-        }
-        yield return new WaitForSeconds(3.5f);
-        isMove = false;
-        yield return new WaitForSeconds(1f);
-        isPatten = false;
-
     }
 
 
@@ -320,10 +339,10 @@ public class TinWoodman : MonoBehaviour
         {
             Transform spawnPoint = HeartAttack_Spawn_Point.transform;
 
-
+            SoundManager.Instance.Play_TinWoodManHeartSound();
             Quaternion angleAxis = Quaternion.Euler(0, 0, angle - 90);
             GameObject HeartAttack = Instantiate(Heart_Bullet, spawnPoint.transform.position, angleAxis);
-
+            HeartAttack.GetComponent<SpriteRenderer>().sprite = heart_Sprite[stack % 2];
 
             HeartAttack.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             /*
@@ -336,17 +355,14 @@ public class TinWoodman : MonoBehaviour
                 HeartAttack.transform.rotation = Quaternion.Euler(0, 0, Random.Range(60, 200));
             }
             */
-
-
-
             stack++;
 
-            yield return new WaitForSeconds(0.6f);
+            yield return new WaitForSeconds(1f);
         }
 
         yield return new WaitForSeconds(2f);
         HeartAttack_Spawn_Point.SetActive(false);
-        isPatten = false;
+        isPattern = false;
     }
 
 
@@ -357,18 +373,19 @@ public class TinWoodman : MonoBehaviour
             yield return new WaitForSeconds(2f);
         }
 
-        
-        if(dir == "Left")
+        Middle_Floor.SetActive(true);
+        if (dir == "Left")
         {
             LeftOil.SetActive(true);
             leftArm.GetComponent<SpriteRenderer>().sprite = Arm_Hand;
+            
         }
         else
         {
             RightOil.SetActive(true);
             rightArm.GetComponent<SpriteRenderer>().sprite = Arm_Hand;
         }
-        
+        SoundManager.Instance.Play_TinWoodManOilSound();
         yield return new WaitForSeconds(3f); // 3초뒤 실행
         Axe.SetActive(true);
         StartCoroutine(Attack_OilFlooding());
@@ -379,20 +396,23 @@ public class TinWoodman : MonoBehaviour
     {
 
         //오일 올라오기
-        Oil_Object.GetComponent<OilFlooding>().isPatten = true;
-        Middle_Floor.SetActive(true);
+        Oil_Object.GetComponent<OilFlooding>().isPattern = true;
+        
         
         yield return new WaitForSeconds(15f);
-        Oil_Object.GetComponent<OilFlooding>().isPatten = false;
-        Middle_Floor.SetActive(false);
+        Oil_Object.GetComponent<OilFlooding>().isPattern = false;
+        
         LeftOil.SetActive(false);
         RightOil.SetActive(false);
         rightArm.GetComponent<SpriteRenderer>().sprite = Arm_Axe;
         leftArm.GetComponent<SpriteRenderer>().sprite = Arm_Axe;
         Axe.SetActive(false);
-        isPatten = false;
-    }
+        Axe.transform.position = new Vector3(12.77f, Axe.transform.position.y, Axe.transform.position.z);
+        isPattern = false;
 
+        yield return new WaitForSeconds(2f);
+        Middle_Floor.SetActive(false);
+    }
 
 
     private IEnumerator Start_Apple()
@@ -420,15 +440,15 @@ public class TinWoodman : MonoBehaviour
             RightAxeAttackPoint.SetActive(true);
             rightArm.GetComponent<Animator>().SetBool("isAttack", true);
         }
-
         int stack = 0;
         while (stack < 30)
         {
             Transform spawnPoint = Apple_Spawn_Point.transform;
-
+            
             float x = Random.Range(-9f, 9f);
 
             GameObject apple = Instantiate(Apple_Bullet, spawnPoint);
+            
             apple.transform.position = new Vector3(x, apple.transform.position.y, apple.transform.position.z);
             apple.GetComponent<AppleObject>().isAttack = true;
             apple.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
@@ -441,27 +461,41 @@ public class TinWoodman : MonoBehaviour
         rightArm.GetComponent<Animator>().SetBool("isAttack", false);
         yield return new WaitForSeconds(2f);
        
-        isPatten = false;
+        isPattern = false;
     }
 
 
-
-
-
-
+    public void play_AxeSound()
+    {
+        SoundManager.Instance.Play_TinWoodManAxeSound();
+    }
 
 
     private void Boss_Die()
     {
         isDie = true;
+        leftArm.GetComponent<Animator>().SetBool("isAttack", false);
+        rightArm.GetComponent<Animator>().SetBool("isAttack", false);
+        Oil_Object.GetComponent<OilFlooding>().isPattern = false;
+
+        LeftOil.SetActive(false);
+        RightOil.SetActive(false);
+        rightArm.GetComponent<SpriteRenderer>().sprite = Arm_Axe;
+        leftArm.GetComponent<SpriteRenderer>().sprite = Arm_Axe;
+        Axe.SetActive(false);
+        Axe.transform.position = new Vector3(12.77f, Axe.transform.position.y, Axe.transform.position.z);
         StopAllCoroutines();
         StartCoroutine(Boss_Die_Effect());
     }
+
     private IEnumerator Boss_Die_Effect()
     {
         int check = 0;
+        DialogSystem.Instance.BossClear();
+        PlayerPrefs.SetInt("TinWoodClear", 1);
         while (check < 20)
         {
+            SoundManager.Instance.Play_ScareCrowHitSound();
             GameObject effect = Instantiate(Die_Effect_Set[Random.Range(0, 3)], transform);
 
             effect.transform.position = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-2, 4), transform.position.z);
@@ -474,12 +508,17 @@ public class TinWoodman : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
         }
+
+        
     }
 
     public void GetHit()
     {
         boss_HP--;
-
+        BossHP_Slider.value = (float)(float)(boss_HP / (float)boss_MaxHp);
+        hitAnim.SetTrigger("IsHit");
+        //ani.SetTrigger("trigHit");
+        SoundManager.Instance.Play_ScareCrowHitSound();
         if (boss_HP <= 0)
         {
             if (isDie == false)
@@ -489,12 +528,5 @@ public class TinWoodman : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("PlayerAttack") == true)
-        {
-            //Destroy(collision.gameObject);
-            
-        }
-    }
+
 }

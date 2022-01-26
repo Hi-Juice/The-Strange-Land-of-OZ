@@ -15,13 +15,19 @@ public class PlayerAttack : MonoBehaviour
     GameObject enemy;
     public string tagName;
     public float shortDis;
+    public bool isStart = false;
+
+    public EffectManager effectManager;
 
     [SerializeField] public int shot = 12;
     public float deg;
     // Start is called before the first frame update
     void Start()
     {
+        effectManager = GameObject.FindObjectOfType<EffectManager>();
         playerAnim = GetComponent<Animator>();
+
+        
     }
 
     // Update is called once per frame
@@ -29,10 +35,10 @@ public class PlayerAttack : MonoBehaviour
     {
         if(curtime <= 0)
         {
-            if (Input.GetKey(KeyCode.X))
+            if (Input.GetKey(KeyCode.X) && isStart == true)
             {
-                playerAnim.SetTrigger("attack");
-                SoundManager.Instance.Play_PlayerAttackSound();
+                
+                //SoundManager.Instance.Play_PlayerAttackSound();
                 //GameObject go = Instantiate(bullet);
                 //go.transform.position = turret.transform.position;
                 Shot();
@@ -45,7 +51,11 @@ public class PlayerAttack : MonoBehaviour
 
     public void Shot()
     {
-        if(FindObjectsOfType<SubMob_Tree>() != null)
+
+        GameObject vfx = effectManager.GetStaffEffect();
+        vfx.transform.position = shotPos.position;
+
+        if (FindObjectsOfType<SubMob_Tree>() != null)
         {
             SearchNearestMob();
         }
@@ -54,6 +64,12 @@ public class PlayerAttack : MonoBehaviour
             enemy = GameObject.Find("AttackPoint").gameObject;
         }
 
+        SoundManager.Instance.Play_PlayerAttackSound();
+        if(playerAnim.GetCurrentAnimatorStateInfo(0).fullPathHash != Animator.StringToHash("Base Layer.Attack"))
+        {
+            playerAnim.SetTrigger("attack");
+        }
+        
         StartCoroutine(CreateMissile());
     }
 
@@ -87,7 +103,7 @@ public class PlayerAttack : MonoBehaviour
             foreach (SubMob_Tree found in mobs)
             {
                 float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
-
+                // &&Distance < 7f
                 if (Distance < shortDis) // 위에서 잡은 기준으로 거리 재기
                 {
                     enemy = found.gameObject;

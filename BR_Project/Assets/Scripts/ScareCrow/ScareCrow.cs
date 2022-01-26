@@ -17,6 +17,7 @@ public class ScareCrow : MonoBehaviour
 
     Rigidbody2D rb;
     public Animator Crow_Animator;
+    public GameObject Parent;
     Animator ani;
 
 
@@ -32,7 +33,7 @@ public class ScareCrow : MonoBehaviour
     public GameObject straw_Bullet;
     public GameObject straw_Spawn_Point;
     public GameObject Player;
-    public bool isPatten = false;
+    public bool isPattern = false;
     public bool isMove;
     public bool isStart;
     public bool isDie = false;
@@ -45,6 +46,7 @@ public class ScareCrow : MonoBehaviour
    
     public GameObject crow_CAW;
 
+
     public GameObject Fork;
     public GameObject Fork_Attack_Point;
     public GameObject Origin_Move_Point;
@@ -53,13 +55,15 @@ public class ScareCrow : MonoBehaviour
     public GameObject[] Die_Effect_Set;
 
     public Slider BossHP_Slider;
-    int patten;
+    int Pattern;
 
+    Transform initialTransform;
+    Animator hitAnim;
     BossState bossState = BossState.Move;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        ani = GetComponentInParent<Animator>();
+        ani = Parent.GetComponent<Animator>();
         ani.SetBool("isJump", true);
         
         straw_Spawn_Point = GameObject.Find("Straw_Spawn_Point");
@@ -76,10 +80,11 @@ public class ScareCrow : MonoBehaviour
         BossHP_Slider = GameObject.Find("BossHpSlider").GetComponent<Slider>();
         boss_HP = boss_MaxHp;
 
-        isPatten = true;
-        StartCoroutine(StartWait());
-        patten = Random.Range(0, 3);
-
+        isPattern = true;
+        
+        Pattern = Random.Range(0, 3);
+        hitAnim = GetComponent<Animator>();
+        initialTransform = this.transform;
     }
 
     // Update is called once per frame
@@ -114,39 +119,44 @@ public class ScareCrow : MonoBehaviour
             }
 
 
-            if (isPatten == false)
+            if (isPattern == false)
             {
 
                 Update_State();
                 if (bossState == BossState.Move)
                 {
                     StartCoroutine("Move");
-                    isPatten = true;
+                    isPattern = true;
                 }
                 if (bossState == BossState.Crow)
                 {
                     StartCoroutine("Make_Crow");
-                    isPatten = true;
+                    isPattern = true;
                 }
                 if (bossState == BossState.Throw_Straw)
                 {
                     StartCoroutine("Make_Straw");
-                    isPatten = true;
+                    isPattern = true;
                 }
                 if (bossState == BossState.Fork)
                 {
                     StartCoroutine("Make_Fork");
-                    isPatten = true;
+                    isPattern = true;
                 }
             }
+        }
+        else
+        {
+            Debug.Log("Á×À½");
+            //this.transform.position = new Vector3(0, 0.58f, 0);
+            this.transform.position = new Vector3(0, transform.position.y, 0);
+            Parent.transform.position = new Vector3(0, Parent.transform.position.y, 0);
         }
     }
 
     public void Make_Straw()
     {
-        
         StartCoroutine("Start_Straw");
-        
     }
 
     public void Make_Crow()
@@ -157,27 +167,26 @@ public class ScareCrow : MonoBehaviour
     public void Make_Fork()
     {
         StartCoroutine("Start_Fork");
-        
     }
 
 
     private void Update_State()
     {
         
-        if (patten == 0)
+        if (Pattern == 0)
         {
             bossState = BossState.Fork;
-            patten++;
+            Pattern++;
         }
-        else if (patten == 1)
+        else if (Pattern == 1)
         {
             bossState = BossState.Throw_Straw;
-            patten++;
+            Pattern++;
         }
-        else if (patten == 2)
+        else if (Pattern == 2)
         {
             bossState = BossState.Crow;
-            patten = 0;
+            Pattern = 0;
         }
         /*
         else
@@ -204,44 +213,58 @@ public class ScareCrow : MonoBehaviour
         }
     }
 
+
+    public void StartGame()
+    {
+        if(isStart == false)
+        {
+            isStart = true;
+            StartCoroutine(StartWait());
+        }
+    }
+
     private IEnumerator StartWait()
     {
-        yield return new WaitForSeconds(5f);
-        isPatten = false;
+        yield return new WaitForSeconds(3.5f);
+        isPattern = false;
     }
 
     private IEnumerator Move()
     {
-        if(isStart == false)
+        if(!isDie)
         {
-            yield return new WaitForSeconds(2f);
-        }
-        int patten_Time = 0;
-        int Random_num = Random.Range(0, 2);
-        if (Random_num == 0)
-        {
-            move_Direct = "Left";
-        }
-        else
-        {
-            move_Direct = "Right";
-        }
-
-        isMove = true;
-
-        while (true)
-        {
-            yield return new WaitForSeconds(1f);
-            patten_Time++;
-            
-            if (patten_Time > 6f)
+            if (isStart == false)
             {
-                isPatten = false;
-                isMove = false;
-                StopCoroutine(Move());
-                break;
+                yield return new WaitForSeconds(2f);
+            }
+            int Pattern_Time = 0;
+            int Random_num = Random.Range(0, 2);
+            if (Random_num == 0)
+            {
+                move_Direct = "Left";
+            }
+            else
+            {
+                move_Direct = "Right";
+            }
+
+            isMove = true;
+
+            while (true)
+            {
+                yield return new WaitForSeconds(1f);
+                Pattern_Time++;
+
+                if (Pattern_Time > 6f)
+                {
+                    isPattern = false;
+                    isMove = false;
+                    StopCoroutine(Move());
+                    break;
+                }
             }
         }
+        
     }
 
     private IEnumerator Start_Straw()
@@ -279,7 +302,7 @@ public class ScareCrow : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
-        isPatten = false;
+        isPattern = false;
     }
 
     
@@ -291,7 +314,7 @@ public class ScareCrow : MonoBehaviour
         }
 
         Crow_Animator.SetBool("isCAW", true);
-        SoundManager.Instance.Play_ScareCrowPattenCrowSound();
+        SoundManager.Instance.Play_ScareCrowPatternCrowSound();
         crow_CAW.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         StartCoroutine(Attack_Crow());
@@ -338,7 +361,7 @@ public class ScareCrow : MonoBehaviour
         yield return new WaitForSeconds(2f);
         crow_CAW.SetActive(false);
         Crow_Animator.SetBool("isCAW", false);
-        isPatten = false;
+        isPattern = false;
     }
 
     private IEnumerator Start_Fork()
@@ -366,14 +389,20 @@ public class ScareCrow : MonoBehaviour
     private void Boss_Die()
     {
         isDie = true;
+        isFork = false;
+   
+        Fork_Component.Stop_Attack();
         StopAllCoroutines();
         StartCoroutine(Boss_Die_Effect());
     }
     private IEnumerator Boss_Die_Effect()
     {
         int check = 0;
-        while(check < 20)
+        DialogSystem.Instance.BossClear();
+        PlayerPrefs.SetInt("ScareCrowClear", 1);
+        while (check < 20)
         {
+            SoundManager.Instance.Play_ScareCrowHitSound();
             GameObject effect = Instantiate(Die_Effect_Set[Random.Range(0, 3)], transform);
             
             effect.transform.position = new Vector3(transform.position.x + Random.Range(-1, 2), transform.position.y + Random.Range(-2, 4), transform.position.z);
@@ -386,12 +415,15 @@ public class ScareCrow : MonoBehaviour
             
             yield return new WaitForSeconds(0.5f);
         }
+        
     }
+
 
     public void GetHit()
     {
         boss_HP--;
         BossHP_Slider.value = (float)(float)(boss_HP / (float)boss_MaxHp);
+        hitAnim.SetTrigger("IsHit");
         SoundManager.Instance.Play_ScareCrowHitSound();
         if (boss_HP <= 0)
         {
@@ -400,16 +432,11 @@ public class ScareCrow : MonoBehaviour
                 Boss_Die();
             }
         }
+
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("PlayerAttack") == true)
-        {
 
-        }
-    }
 }
 
 

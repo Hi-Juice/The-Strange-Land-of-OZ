@@ -1,0 +1,1848 @@
+fileFormatVersion: 2
+guid: 827cebb28c4c00240936c9f8ddd28e49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5509683298430966492
+    second: KeyboardModernBlack_0
+  - first:
+      213: -3900683113966892334
+    second: KeyboardModernBlack_1
+  - first:
+      213: 4304082415780945857
+    second: KeyboardModernBlack_2
+  - first:
+      213: -6967813154807538129
+    second: KeyboardModernBlack_3
+  - first:
+      213: -952264606549849459
+    second: KeyboardModernBlack_4
+  - first:
+      213: -4831053297761130887
+    second: KeyboardModernBlack_5
+  - first:
+      213: -5180912772541479642
+    second: KeyboardModernBlack_6
+  - first:
+      213: -5438364387028469166
+    second: KeyboardModernBlack_7
+  - first:
+      213: -2453923182788512296
+    second: KeyboardModernBlack_8
+  - first:
+      213: 1662009029918447440
+    second: KeyboardModernBlack_9
+  - first:
+      213: 112608686127211374
+    second: KeyboardModernBlack_10
+  - first:
+      213: 2020913708515960512
+    second: KeyboardModernBlack_11
+  - first:
+      213: -3838482662313315030
+    second: KeyboardModernBlack_12
+  - first:
+      213: -1069292585984633316
+    second: KeyboardModernBlack_13
+  - first:
+      213: 8371764113909591200
+    second: KeyboardModernBlack_14
+  - first:
+      213: -7452491167867308932
+    second: KeyboardModernBlack_15
+  - first:
+      213: -6242390562567989315
+    second: KeyboardModernBlack_16
+  - first:
+      213: -8611667429020533725
+    second: KeyboardModernBlack_17
+  - first:
+      213: -3202032572333527010
+    second: KeyboardModernBlack_18
+  - first:
+      213: 2313805638231710873
+    second: KeyboardModernBlack_19
+  - first:
+      213: 7748957652146995912
+    second: KeyboardModernBlack_20
+  - first:
+      213: -5853472631093556771
+    second: KeyboardModernBlack_21
+  - first:
+      213: -2437305088703930958
+    second: KeyboardModernBlack_22
+  - first:
+      213: -5401338968160386029
+    second: KeyboardModernBlack_23
+  - first:
+      213: 8113490002823013713
+    second: KeyboardModernBlack_24
+  - first:
+      213: -8441486221067656213
+    second: KeyboardModernBlack_25
+  - first:
+      213: 2288577158457473128
+    second: KeyboardModernBlack_26
+  - first:
+      213: 5854197992441873038
+    second: KeyboardModernBlack_27
+  - first:
+      213: -4898503391147094118
+    second: KeyboardModernBlack_28
+  - first:
+      213: 4455203655860162096
+    second: KeyboardModernBlack_29
+  - first:
+      213: 655182182403280765
+    second: KeyboardModernBlack_30
+  - first:
+      213: -7777110462708019414
+    second: KeyboardModernBlack_31
+  - first:
+      213: -1022534784310998828
+    second: KeyboardModernBlack_32
+  - first:
+      213: 525098064294061056
+    second: KeyboardModernBlack_33
+  - first:
+      213: -6397971438183290281
+    second: KeyboardModernBlack_34
+  - first:
+      213: -8222089758473000107
+    second: KeyboardModernBlack_35
+  - first:
+      213: 1670964610124795445
+    second: KeyboardModernBlack_36
+  - first:
+      213: 6349488508773705515
+    second: KeyboardModernBlack_37
+  - first:
+      213: -7181091813195685333
+    second: KeyboardModernBlack_38
+  - first:
+      213: 5800274327272592391
+    second: KeyboardModernBlack_39
+  - first:
+      213: 1141465498282851814
+    second: KeyboardModernBlack_40
+  - first:
+      213: 8986673529421764818
+    second: KeyboardModernBlack_41
+  - first:
+      213: -8742192240925186211
+    second: KeyboardModernBlack_42
+  - first:
+      213: -5613568719392279268
+    second: KeyboardModernBlack_43
+  - first:
+      213: -7378639852343301415
+    second: KeyboardModernBlack_44
+  - first:
+      213: -1343754543032980140
+    second: KeyboardModernBlack_45
+  - first:
+      213: -822384734600988242
+    second: KeyboardModernBlack_46
+  - first:
+      213: 5549285428669566041
+    second: KeyboardModernBlack_47
+  - first:
+      213: -6848956211638728648
+    second: KeyboardModernBlack_48
+  - first:
+      213: -5757618246948219887
+    second: KeyboardModernBlack_49
+  - first:
+      213: 6831363693737937524
+    second: KeyboardModernBlack_50
+  - first:
+      213: 1434478780274192080
+    second: KeyboardModernBlack_51
+  - first:
+      213: -6359792441369821907
+    second: KeyboardModernBlack_52
+  - first:
+      213: 3341436426106480817
+    second: KeyboardModernBlack_53
+  - first:
+      213: -1591024108890960344
+    second: KeyboardModernBlack_54
+  - first:
+      213: 1984407998719872409
+    second: KeyboardModernBlack_55
+  - first:
+      213: 1492225427633111267
+    second: KeyboardModernBlack_56
+  - first:
+      213: 8124285746225864878
+    second: KeyboardModernBlack_57
+  - first:
+      213: 7292543825404909797
+    second: KeyboardModernBlack_58
+  - first:
+      213: 5224915881718333042
+    second: KeyboardModernBlack_59
+  - first:
+      213: 4302325562136974007
+    second: KeyboardModernBlack_60
+  - first:
+      213: 5134632396003101322
+    second: KeyboardModernBlack_61
+  - first:
+      213: 8938241948372044231
+    second: KeyboardModernBlack_62
+  - first:
+      213: 4897631684131908439
+    second: KeyboardModernBlack_63
+  - first:
+      213: -2578167519938118677
+    second: KeyboardModernBlack_64
+  - first:
+      213: -8151858555412961004
+    second: KeyboardModernBlack_65
+  - first:
+      213: -2150591547238545317
+    second: KeyboardModernBlack_66
+  - first:
+      213: 3484144605829132164
+    second: KeyboardModernBlack_67
+  - first:
+      213: 2421890895746319371
+    second: KeyboardModernBlack_68
+  - first:
+      213: 6222688126284363303
+    second: KeyboardModernBlack_69
+  - first:
+      213: 107106555557568905
+    second: KeyboardModernBlack_70
+  - first:
+      213: 232129806941440213
+    second: KeyboardModernBlack_71
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KeyboardModernBlack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 497
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425ae1c4b3ca983b0800000000000000
+      internalID: -5509683298430966492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 481
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da83a2ef5dfdd9c0800000000000000
+      internalID: -3900683113966892334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 465
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfd0a4372c2bbb30800000000000000
+      internalID: 4304082415780945857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e176e4ada5d4f90800000000000000
+      internalID: -6967813154807538129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 433
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a4b6ab260e8c2f0800000000000000
+      internalID: -952264606549849459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 417
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976e7f72f96a4fcb0800000000000000
+      internalID: -4831053297761130887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 401
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62581647843b918b0800000000000000
+      internalID: -5180912772541479642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_7
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 401
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a7808576c0784b0800000000000000
+      internalID: -5438364387028469166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_8
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 401
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d57bcfddd9e1fdd0800000000000000
+      internalID: -2453923182788512296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_9
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 401
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057d7c13864a01710800000000000000
+      internalID: 1662009029918447440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 401
+        width: 64
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e636c3fd001109100800000000000000
+      internalID: 112608686127211374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_11
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 401
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6afc58f4abb0c10800000000000000
+      internalID: 2020913708515960512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_12
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 401
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25b1541b58fabac0800000000000000
+      internalID: -3838482662313315030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_13
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 401
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c165d63fe0c1921f0800000000000000
+      internalID: -1069292585984633316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_14
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 401
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aca1f82b1b7e2470800000000000000
+      internalID: 8371764113909591200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74788f84ce639890800000000000000
+      internalID: -7452491167867308932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 369
+        width: 96
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db752e06bd29e59a0800000000000000
+      internalID: -6242390562567989315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 353
+        width: 128
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cfd6199163d7880800000000000000
+      internalID: -8611667429020533725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 353
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1074de27581093d0800000000000000
+      internalID: -3202032572333527010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 353
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cd81a08f94c1020800000000000000
+      internalID: 2313805638231710873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_20
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 353
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c244cbcde3d98b60800000000000000
+      internalID: 7748957652146995912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_21
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 353
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd98231b7a944cea0800000000000000
+      internalID: -5853472631093556771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_22
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 353
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bddc8a6fe3fc2ed0800000000000000
+      internalID: -2437305088703930958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 337
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314435373d69a05b0800000000000000
+      internalID: -5401338968160386029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_24
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 337
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155e2f2ab28e89070800000000000000
+      internalID: 8113490002823013713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 337
+        width: 80
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be368e0c101d9da80800000000000000
+      internalID: -8441486221067656213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_26
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 337
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8683eeadcc8a2cf10800000000000000
+      internalID: 2288577158457473128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_27
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 337
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e828d48ae0a4e3150800000000000000
+      internalID: 5854197992441873038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_28
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 337
+        width: 80
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f81af7e15050cb0800000000000000
+      internalID: -4898503391147094118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 321
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e019dce1014dd30800000000000000
+      internalID: 4455203655860162096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_30
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 321
+        width: 102
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f005d39bca71900800000000000000
+      internalID: 655182182403280765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_31
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 321
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f80533d37221490800000000000000
+      internalID: -7777110462708019414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_32
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 321
+        width: 102
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d889a2080a3fc1f0800000000000000
+      internalID: -1022534784310998828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 305
+        width: 256
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0042e7a48e5894700800000000000000
+      internalID: 525098064294061056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 289
+        width: 96
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a6df7ffd6d537a0800000000000000
+      internalID: -6397971438183290281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 289
+        width: 96
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55be6da5de445ed80800000000000000
+      internalID: -8222089758473000107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 273
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53eccb2b575703710800000000000000
+      internalID: 1670964610124795445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27a1ee582aed1850800000000000000
+      internalID: 6349488508773705515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 241
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22610ffa03a75c90800000000000000
+      internalID: -7181091813195685333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70496ecf4c6be7050800000000000000
+      internalID: 5800274327272592391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed738ca2dc47df00800000000000000
+      internalID: 1141465498282851814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 193
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8179926f317bc70800000000000000
+      internalID: 8986673529421764818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 177
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d576a79997e7da680800000000000000
+      internalID: -8742192240925186211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_43
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 177
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15f06eddf89812b0800000000000000
+      internalID: -5613568719392279268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_44
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 177
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da6983e52ec99990800000000000000
+      internalID: -7378639852343301415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_45
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 177
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45da335dc560a5de0800000000000000
+      internalID: -1343754543032980140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_46
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 177
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea97769e07d4694f0800000000000000
+      internalID: -822384734600988242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_47
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 177
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cc91d22b5030d40800000000000000
+      internalID: 5549285428669566041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_48
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 177
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8388113ec9e93f0a0800000000000000
+      internalID: -6848956211638728648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_49
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 177
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1141856a5b4d810b0800000000000000
+      internalID: -5757618246948219887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_50
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 177
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a00c8d511edce50800000000000000
+      internalID: 6831363693737937524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 161
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de2418b9da48e310800000000000000
+      internalID: 1434478780274192080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 96
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dffee587a7db7a0800000000000000
+      internalID: -6359792441369821907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 129
+        width: 128
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8a0a1d9ba2f5e20800000000000000
+      internalID: 3341436426106480817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_54
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 129
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ec878a00c8be9e0800000000000000
+      internalID: -1591024108890960344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d442d9f880a8b10800000000000000
+      internalID: 1984407998719872409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_56
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 129
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e080eace1375b410800000000000000
+      internalID: 1492225427633111267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_57
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 129
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0ef8587d24fb070800000000000000
+      internalID: 8124285746225864878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_58
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 129
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e85a3eb8f1543560800000000000000
+      internalID: 7292543825404909797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_59
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 113
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e3e17cf41a28840800000000000000
+      internalID: 5224915881718333042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_60
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 113
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2d147dd4ee4bb30800000000000000
+      internalID: 4302325562136974007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_61
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 113
+        width: 80
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a4affa5f0e14740800000000000000
+      internalID: 5134632396003101322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_62
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 113
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c90639f1b30b0c70800000000000000
+      internalID: 8938241948372044231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_63
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 113
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b61656112e7f340800000000000000
+      internalID: 4897631684131908439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_64
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 113
+        width: 80
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb73a2ec42883cd0800000000000000
+      internalID: -2578167519938118677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_65
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 97
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419a16195d7cede80800000000000000
+      internalID: -8151858555412961004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_66
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 97
+        width: 102
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5883e1d1609722e0800000000000000
+      internalID: -2150591547238545317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_67
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 97
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fe9882f0b2a5030800000000000000
+      internalID: 3484144605829132164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_68
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 97
+        width: 102
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0446bd10f84c9120800000000000000
+      internalID: 2421890895746319371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 256
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7267833b1ed6b5650800000000000000
+      internalID: 6222688126284363303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 96
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981ef1548d48c7100800000000000000
+      internalID: 107106555557568905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardModernBlack_71
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 65
+        width: 96
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8468c54d0b83300800000000000000
+      internalID: 232129806941440213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

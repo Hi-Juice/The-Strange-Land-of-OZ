@@ -57,6 +57,7 @@ public class PlayerMove : MonoBehaviour
                 playerAnim.SetBool("isJump", true);
                 rigid.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
                 isJumping = true;
+                SoundManager.Instance.Play_PlayerJumpSound();
             }
             //rigid.velocity = new Vector2(rigid.velocity.x, jumpHeight);
         }
@@ -92,7 +93,7 @@ public class PlayerMove : MonoBehaviour
         if(collision.CompareTag("Obstacle"))
         {
             playerAnim.SetTrigger("hurt");
-            SoundManager.Instance.Play_PlayerHitSound();
+            //SoundManager.Instance.Play_PlayerHitSound();
         }
     }
 }

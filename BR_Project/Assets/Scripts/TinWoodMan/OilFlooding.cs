@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OilFlooding : MonoBehaviour
 {
-    public bool isPatten = false;
+    public bool isPattern = false;
     public bool dir = true; // true = À§, false = ¾Æ·¡
 
 
@@ -12,7 +12,7 @@ public class OilFlooding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPatten == true)
+        if(isPattern == true)
         {
             if (dir == true)
             {

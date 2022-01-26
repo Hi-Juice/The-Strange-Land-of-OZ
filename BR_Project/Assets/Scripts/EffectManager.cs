@@ -5,37 +5,67 @@ using UnityEngine;
 public class EffectManager : MonoBehaviour
 {
     public GameObject prefab_VFX_playerAttack;
-    GameObject[] effectPool;
+    public GameObject prefab_VFX_staffEffect;
+    GameObject[] effectPool_bullet;
+    GameObject[] effectPool_staff;
     public int effectCount;
+
     void Start()
     {
         GameObject effectParent = new GameObject("EffectParent");
-        effectPool = new GameObject[effectCount];
+        effectPool_bullet = new GameObject[effectCount];
         for(int i=0; i<effectCount; i++)
         {
-            effectPool[i] = (GameObject)Instantiate(prefab_VFX_playerAttack);
-            effectPool[i].transform.SetParent(effectParent.transform);
-            effectPool[i].SetActive(false);
+            effectPool_bullet[i] = (GameObject)Instantiate(prefab_VFX_playerAttack);
+            effectPool_bullet[i].transform.SetParent(effectParent.transform);
+            effectPool_bullet[i].SetActive(false);
         }
+
+        effectPool_staff = new GameObject[effectCount];
+        for (int i = 0; i < effectCount; i++)
+        {
+            effectPool_staff[i] = (GameObject)Instantiate(prefab_VFX_staffEffect);
+            effectPool_staff[i].transform.SetParent(effectParent.transform);
+            effectPool_staff[i].SetActive(false);
+        }
+
     }
 
 
-    GameObject eff;
-    public GameObject GetEffect()
+    GameObject eff_bullet;
+    public GameObject GetBulletEffect()
     {
-        foreach(GameObject obj in effectPool)
+        foreach(GameObject obj in effectPool_bullet)
         {
             if(obj.activeSelf == false)
             {
-                eff = obj;
+                eff_bullet = obj;
                 break;
             }
         }
 
-        eff.SetActive(true);
-        StartCoroutine(BackToPool(eff));
+        eff_bullet.SetActive(true);
+        StartCoroutine(BackToPool(eff_bullet));
         //Debug.Log("EffectManager : " + eff.name);
-        return eff;
+        return eff_bullet;
+    }
+
+    GameObject eff_staff;
+    public GameObject GetStaffEffect()
+    {
+        foreach (GameObject obj in effectPool_staff)
+        {
+            if (obj.activeSelf == false)
+            {
+                eff_staff = obj;
+                break;
+            }
+        }
+
+        eff_staff.SetActive(true);
+        StartCoroutine(BackToPool(eff_staff));
+        //Debug.Log("EffectManager : " + eff.name);
+        return eff_staff;
     }
 
     IEnumerator BackToPool(GameObject eff)

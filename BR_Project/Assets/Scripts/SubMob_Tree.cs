@@ -25,9 +25,11 @@ public class SubMob_Tree : MonoBehaviour
     TreeState tState;
     float posY;
     Rigidbody2D rb;
+    Animator ani;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        ani = GetComponent<Animator>();
         posY = transform.position.y;
         player = Transform.FindObjectOfType<PlayerMove>().transform;
         hp = defaultHp;
@@ -44,15 +46,22 @@ public class SubMob_Tree : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.tag == "Bullet")
+        if (collision.transform.tag == "Bullet")
         {
-            if(hp > 0)
+            if (hp > 0)
             {
+                ani.SetTrigger("trigHit");
                 hp--;
+                SoundManager.Instance.Play_TreeHitSound();
+                if(hp == 0)
+                {
+
+                    SoundManager.Instance.Play_TreeDidSound();
+                    Destroy(this.gameObject);
+                }
             }
-            Destroy(this.gameObject);
         }
     }
 
@@ -61,14 +70,14 @@ public class SubMob_Tree : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.transform.position);
         if((player.transform.position.x - this.transform.position.x) > 0 )// 양수이면 플레이어가 몹의 오른쪽에 있는 것 
         {
-            if(distance > 1)
+            if(distance > 0.3)
             {
                 transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
             }
         }
         else
         {
-            if(distance > 1)
+            if(distance > 0.3)
             {
                 transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
             }

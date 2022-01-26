@@ -8,11 +8,14 @@ public class HeartAttack : MonoBehaviour
     float throwPower_up = 50f;
     float throwPower_side = 50f;
 
+    
+
     public bool isAttack = false;
 
     void Start()
     {
         transform.parent = null;
+       
         
     }
     private void OnEnable()
@@ -36,6 +39,10 @@ public class HeartAttack : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+        }
+        if(collision.CompareTag("Player"))
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
