@@ -2,7 +2,7 @@
  
 건국대학교 동아리 엣지 게임개발 경진대회 1등 수상작입니다.
 
-![](https://images.velog.io/images/minjujuu/post/7d51fbf7-8456-49d3-a2d7-70d6f448f291/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C%20%EC%83%81%EC%9E%A5.PNG)
+![](https://images.velog.io/images/minjujuu/post/7d51fbf7-8456-49d3-a2d7-70d6f448f291/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C%20%EC%83%81%EC%9E%A5.PNG){: width="512" height="384"}
 
 ## 게임 설치 경로
 https://velog.io/@kkackit02/The-Strange-Land-of-OZ
