@@ -6,7 +6,7 @@ public class Boss_Lion : MonoBehaviour
 {
     public enum LionState
     {
-        Start, // µîÀå
+        Start, // ë“±ì¥
         P_CatPunch,
         P_CrownBomb,
         P_TreeMob,
@@ -22,7 +22,7 @@ public class Boss_Lion : MonoBehaviour
 
     public GameObject obstacle_crown;
     public Animator crownAnim;
-    public Transform[] parent_crownSpawnPoints;  // 2°³ÀÇ ºÎ¸ğ
+    public Transform[] parent_crownSpawnPoints;  // 2ê°œì˜ ë¶€ëª¨
     public float timeBetweenWarningAndRain = 2.0f;
     public int crownPatternRepeatNum = 3;
     public int tri_spawnTimer = 1;
@@ -32,7 +32,7 @@ public class Boss_Lion : MonoBehaviour
     public int boss_HP;
     public Slider BossHP_Slider;
     Transform parentCSP;
-    Transform[] child_crownSpawnPoints; // 4°³ÀÇ ÀÚ½Ä 
+    Transform[] child_crownSpawnPoints; // 4ê°œì˜ ìì‹ 
     
     bool isPlayPattern_crownBomb = false;
     float timer;
@@ -50,7 +50,6 @@ public class Boss_Lion : MonoBehaviour
     public float cpbetTime = 4f;
     public GameObject BG_lianaSet;
 
-    // ±Ù³çÀÌ Â§ ºÎºĞ
     public bool isStart = false;
     public bool isEndDialog = false;
     public GameObject[] Die_Effect_Set;
@@ -73,7 +72,6 @@ public class Boss_Lion : MonoBehaviour
         tears.SetActive(false);
     }
 
-    // ±Ù³çÀÌ Â§ ºÎºĞ
     public void StartGame()
     {
         if (isEndDialog == false)
@@ -96,7 +94,7 @@ public class Boss_Lion : MonoBehaviour
         {
             Update_State();
         }
-        // ±Ù³çÀÌ Â§ ºÎºĞ(isStart·Î °¡µÖÁÜ)
+
         if (isStart)
         {
             switch (lState)
@@ -146,7 +144,7 @@ public class Boss_Lion : MonoBehaviour
         }
     }
 
-    // Å×½ºÆ®¿ë
+    // í…ŒìŠ¤íŠ¸ìš©
     void lStart()
     {
         if(isCrownRain)
@@ -189,11 +187,11 @@ public class Boss_Lion : MonoBehaviour
                 isSpawnBabyLion = true;
                 StartCoroutine(StartBabyLionPattern());
             }
-            // CatPunch : ³É³ÉÆİÄ¡°¡ ³¯¶ó¿À´Â ÆĞÅÏ
-            // ÃÑ ´Ù¼¸°³ÀÇ °¢µµ¿¡¼­ Æ¢¾î³ª¿Ã ¼ö ÀÖ´Ù
-            // µû·Î ºÓÀº »öÀÇ °æ°íÇ¥½Ã´Â ÇÏÁö ¾Ê´Â´Ù
-            // - ´ë½Å ÇØ´ç ¹æÇâ¿¡¼­ »ìÂ¦ ³ª¿Ô´Ù°¡ ±æ°Ô »¸¾î ³ª¿Àµµ·Ï ÇÑ´Ù
-            // - »¸±â Àü¿¡ »ìÂ¦ ³ª¿À±â ¶§¹®¿¡ ±× ¹æÇâ¿¡¼­ ³ª¿Ã °Å¶õ °É ÇÃ·¹ÀÌ¾î°¡ ¾Ë ¼ö ÀÖ´Ù
+            // CatPunch : ëƒ¥ëƒ¥í€ì¹˜ê°€ ë‚ ë¼ì˜¤ëŠ” íŒ¨í„´
+            // ì´ ë‹¤ì„¯ê°œì˜ ê°ë„ì—ì„œ íŠ€ì–´ë‚˜ì˜¬ ìˆ˜ ìˆë‹¤
+            // ë”°ë¡œ ë¶‰ì€ ìƒ‰ì˜ ê²½ê³ í‘œì‹œëŠ” í•˜ì§€ ì•ŠëŠ”ë‹¤
+            // - ëŒ€ì‹  í•´ë‹¹ ë°©í–¥ì—ì„œ ì‚´ì§ ë‚˜ì™”ë‹¤ê°€ ê¸¸ê²Œ ë»—ì–´ ë‚˜ì˜¤ë„ë¡ í•œë‹¤
+            // - ë»—ê¸° ì „ì— ì‚´ì§ ë‚˜ì˜¤ê¸° ë•Œë¬¸ì— ê·¸ ë°©í–¥ì—ì„œ ë‚˜ì˜¬ ê±°ë€ ê±¸ í”Œë ˆì´ì–´ê°€ ì•Œ ìˆ˜ ìˆë‹¤
 
             if (!isPlayPattern_CatPunch)
             {
@@ -209,13 +207,13 @@ public class Boss_Lion : MonoBehaviour
     {
         int cpIdx_1;
         int cpIdx_2;
-        for (int i = 0; i < cp_repeatNum; i++) // ¹İº¹ È½¼ö¸¸Å­
+        for (int i = 0; i < cp_repeatNum; i++) // ë°˜ë³µ íšŸìˆ˜ë§Œí¼
         {
-            cpIdx_1 = Random.Range(0, catPunches.Length); // ÆİÄ¡ ÃâÇö °¢µµ¸¦ ·£´ıÀ¸·Î Á¤ÇÔ
+            cpIdx_1 = Random.Range(0, catPunches.Length); // í€ì¹˜ ì¶œí˜„ ê°ë„ë¥¼ ëœë¤ìœ¼ë¡œ ì •í•¨
             cpIdx_2 = Random.Range(0, catPunches.Length); 
             while (cpIdx_2 == cpIdx_1 || (cpIdx_1 == 0 && cpIdx_2 == 4) || (cpIdx_2 == 0 && cpIdx_1 == 4))
             {
-                cpIdx_2 = Random.Range(0, catPunches.Length); // ÆİÄ¡ ÃâÇö °¢µµ¸¦ ·£´ıÀ¸·Î Á¤ÇÔ
+                cpIdx_2 = Random.Range(0, catPunches.Length); // í€ì¹˜ ì¶œí˜„ ê°ë„ë¥¼ ëœë¤ìœ¼ë¡œ ì •í•¨
             }
 
             for (int j = 0; j < catPunches.Length; j++)
@@ -245,16 +243,16 @@ public class Boss_Lion : MonoBehaviour
         if(!isTriSpawn)
         {
             isTriSpawn = true;
-            StartCoroutine(SpawnTriangle());// ¼­ºê ·çÆ¾ ½ÇÇà
+            StartCoroutine(SpawnTriangle());// ì„œë¸Œ ë£¨í‹´ ì‹¤í–‰
         }
 
         child_crownSpawnPoints = new Transform[4];
 
-        // CrownRain : »çÀÚ°¡ ¾²°í ÀÖ´ø Ä¿´Ù¶õ ¿Õ°üÀÌ ÇÃ·¹ÀÌ¾îÇÑÅ× ³¯¾Æ¿À´Â ÆĞÅÏ
-        // 1. »çÀÚ°¡ ¾²°í ÀÖ´ø ¿Õ°üÀÌ »¡°£»öÀ¸·Î ¹øÂ½ÀÎ´Ù
+        // CrownRain : ì‚¬ìê°€ ì“°ê³  ìˆë˜ ì»¤ë‹¤ë€ ì™•ê´€ì´ í”Œë ˆì´ì–´í•œí…Œ ë‚ ì•„ì˜¤ëŠ” íŒ¨í„´
+        // 1. ì‚¬ìê°€ ì“°ê³  ìˆë˜ ì™•ê´€ì´ ë¹¨ê°„ìƒ‰ìœ¼ë¡œ ë²ˆì©ì¸ë‹¤
         crownAnim.SetTrigger("trig_Warning");
 
-        // waiting Time¸¶´Ù ¹ø°¥¾Æ°¡¸é¼­ ¿Õ°üÀÇ spawn µÈ´Ù
+        // waiting Timeë§ˆë‹¤ ë²ˆê°ˆì•„ê°€ë©´ì„œ ì™•ê´€ì˜ spawn ëœë‹¤
         if(!isPlayPattern_crownBomb)
         {
             isPlayPattern_crownBomb = true;
@@ -402,13 +400,13 @@ public class Boss_Lion : MonoBehaviour
             if (isDie == false)
             {
                 lState = LionState.Dead;
-                Debug.Log("Á×À½!");
+                Debug.Log("ì£½ìŒ!");
             }
         }
     }
 
     public int triangleCount = 7;
-    // ÇÃ·¹ÀÌ¾î¸¦ ´õ Á¤½Å¾ø°Ô ¸¸µå´Â ¼­ºêÆĞÅÏ
+    // í”Œë ˆì´ì–´ë¥¼ ë” ì •ì‹ ì—†ê²Œ ë§Œë“œëŠ” ì„œë¸ŒíŒ¨í„´
     IEnumerator SpawnTriangle()
     {
         for(int i=0; i< triangleCount; i++)
@@ -452,12 +450,12 @@ public class Boss_Lion : MonoBehaviour
         babyLionClone.transform.position = spawnPoints_babyLion[spIdx].position;
     }
 
-    // 4°³ÀÇ ²É
-    // ÆĞÅÏÀÌ ½ÃÀÛµÇ¸é,
-    // - ¹ØÀ¸·Î ³»·Á°¡´Âµ¥ ¶¥À» Âï°í ³»·Á¿Â´Ù
-    // - n¹ø(random)ºÎÅÍ ¸ÕÀú ³»·Á°£´Ù 
-    // - nÃÊ(random) ÈÄ¿¡ ´Ù¸¥ ¾Ö°¡ ³»·Á°£´Ù
-    // - ÁÂ¿ì·Î Á¶±İ¾¿ ¿òÁ÷ÀÎ´Ù
+    // 4ê°œì˜ ê½ƒ
+    // íŒ¨í„´ì´ ì‹œì‘ë˜ë©´,
+    // - ë°‘ìœ¼ë¡œ ë‚´ë ¤ê°€ëŠ”ë° ë•…ì„ ì°ê³  ë‚´ë ¤ì˜¨ë‹¤
+    // - në²ˆ(random)ë¶€í„° ë¨¼ì € ë‚´ë ¤ê°„ë‹¤ 
+    // - nì´ˆ(random) í›„ì— ë‹¤ë¥¸ ì• ê°€ ë‚´ë ¤ê°„ë‹¤
+    // - ì¢Œìš°ë¡œ ì¡°ê¸ˆì”© ì›€ì§ì¸ë‹¤
     public GameObject[] roses;
     
     Transform roseTr;
@@ -479,7 +477,7 @@ public class Boss_Lion : MonoBehaviour
                 float waitTime = Random.Range(1, 3f);
 
                 roseTr = roses[SetRoseIdx(roseIdx)].transform;
-                // ¶³¾îÁö±â
+                // ë–¨ì–´ì§€ê¸°
 
                 StartCoroutine(DownAndUpRose(roseTr));
 
@@ -545,7 +543,7 @@ public class Boss_Lion : MonoBehaviour
             yield return null;
         }
 
-        rose.position = new Vector3(savedXval, rose.position.y, rose.position.z); // x°ª ¸®¼Â
+        rose.position = new Vector3(savedXval, rose.position.y, rose.position.z); // xê°’ ë¦¬ì…‹
     }
 
     public void ShakeCamera()
