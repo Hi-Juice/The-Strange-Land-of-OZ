@@ -5,8 +5,9 @@
 <img src="https://user-images.githubusercontent.com/58885427/151995831-6bf39db0-d7e7-4c45-80da-f54a1dde8d84.png" width="650" height="384"/>
                                                                                                                                          
                                                                                                                                          
-## 게임 설치 경로
-https://velog.io/@kkackit02/The-Strange-Land-of-OZ
+## 📥 다운로드
+
+[![Download](https://img.shields.io/badge/Download-The_Strange_Land_of_OZ-blue?style=flat-square&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/17lJmuAq_2aW6U0RQ_19-MVV6Bw4OS2RN/view)
 
 ## 트레일러(사진 클릭시 유튜브 이동)
 [![Trailer](https://img.youtube.com/vi/qWUD9Z2Uv_w/0.jpg)](https://www.youtube.com/watch?v=qWUD9Z2Uv_w)
